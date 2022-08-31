@@ -1,0 +1,133 @@
+@import '../../../styles/_variables.scss';
+
+
+
+.containerMenu{
+    display: flex;
+}
+.dropdownMenu{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 2rem;
+}
+
+.dropdownMenu li{
+    width: 8.5rem;
+    height: 5.1rem;
+}
+
+.dropdownMenu a{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    background: $tranparent;
+    width: 100%;
+    height: 100%;
+    color: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear;
+}
+.dropdownMenu {
+   li {
+        &:hover > a{
+            background-color: $secundary-color;
+            color: $black;
+            
+        }
+    }
+}
+
+.dropdownMenu li{
+    &:hover > .dropdownSubmenu {
+        display: block;
+    }
+}
+
+.dropdownSubmenu{
+    margin-top: 1px;
+    display: none;
+}
+
+.dropdownSubmenu{
+    a{
+        background-color: $white;
+        color: black;
+        width: 20rem;
+        display: flex;
+        justify-content: flex-start;
+        font-size: .8rem;
+        border-left: 8px solid transparent; 
+    }
+}
+
+
+.dropdownSubmenuGrande{
+    display: none;
+}
+
+.dropdownSubmenuGrande{
+    a{
+        background-color: $white;
+        color: black;
+        width: 50rem;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 8em;
+        border-left: 8px solid transparent; 
+    }
+}
+
+.dropdownMenu li{
+    &:hover > .dropdownSubmenuGrande {
+        display: block;
+    }
+}
+.dropdownSubmenuGrande{
+    section{
+        background-color: $white;
+        color: black;
+        width: 80rem;
+        height: 25rem;
+        position: absolute;
+        right: 40px;
+        display: flex;
+        justify-content: flex-start;
+        font-size: .8rem;
+        border-left: 8px solid transparent; 
+    }
+}
+
+
+//########################## ********************RESPONSIVE DESKTOP*********************** ##########################################
+@media(max-width:$screen-desktop){
+    .containerMenu{
+       .dropdownMenu{
+        display: none;
+       }
+       
+    }
+
+}
+
+
+
+//########################## ********************RESPONSIVE TABLET*********************** ##########################################
+@media(max-width:$screen-tablet){
+    
+}
+
+
+//########################## ********************RESPONSIVE MOBILE*********************** ##########################################
+@media(max-width:$screen-mobile){
+
+}
+
+
+
+

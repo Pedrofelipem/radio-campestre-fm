@@ -1,0 +1,45 @@
+@import '../../styles/_variables.scss';
+
+.headerContainer {
+    height: 6.5rem;
+    width: 100%;
+    position: fixed;
+    background-color: $primary-color;
+    transition: 2s;
+    display: flex;
+    z-index: 10000;
+    
+}
+.activeColor{
+    background-color: $secundary-color;
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    transition: 2s;
+    display: flex;
+}
+.containerImg{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+
+//########################## ********************RESPONSIVE DESKTOP*********************** ##########################################
+@media(max-width:$screen-desktop){
+    
+}
+
+
+
+//########################## ********************RESPONSIVE TABLET*********************** ##########################################
+@media(max-width:$screen-tablet){
+    
+}
+
+
+//########################## ********************RESPONSIVE MOBILE*********************** ##########################################
+@media(max-width:$screen-mobile){
+
+}

@@ -1,0 +1,36 @@
+@import '../../../styles/_variables.scss';
+.containerPlayer{
+    
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10rem;
+    .player{
+        height: 2rem;
+        width: 20rem;
+    }
+}
+
+//########################## ********************RESPONSIVE DESKTOP*********************** ##########################################
+@media(max-width:$screen-desktop){
+    .containerPlayer{
+        .player{
+            height: 2rem;
+            width: 10em;
+        }
+    }
+}
+
+
+
+//########################## ********************RESPONSIVE TABLET*********************** ##########################################
+@media(max-width:$screen-tablet){
+    
+}
+
+
+//########################## ********************RESPONSIVE MOBILE*********************** ##########################################
+@media(max-width:$screen-mobile){
+
+}
