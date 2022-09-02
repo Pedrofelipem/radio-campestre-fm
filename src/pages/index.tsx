@@ -1,23 +1,18 @@
 import React from "react";
-import Link from "next/link";
-
 import { GetStaticProps } from "next";
-
 import { PostsProps } from "../modules/postsProps";
 
 import { getPrismicClient } from "../services/prismic";
 import * as Prismic from '@prismicio/client';
 
-import styles  from "../styles.module.scss";
 import { ItemPost } from "./../components/Home/Components/itemPost/itemPost";
-
 
 export default function Home({posts}: PostsProps) {
   return (
     <div>
         <div>
             {posts.map(Post => (
-                <ItemPost post={Post} />
+                <ItemPost post={Post} key={Post.slug}/>
             ))}   
         </div>
     </div>

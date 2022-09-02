@@ -16,7 +16,7 @@ export const ItemPost = ( props : IntemPostProps) => {
         <article className={styles.containerPost} key={post.slug}>
             <Link  href={`/post/${post.slug}`}>
                 <a>
-                    <img src={post.image} />
+                    <img src={post.image} alt='image' />
                 </a>
             </Link>
             <div className={styles.containerContent}>

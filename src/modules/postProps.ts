@@ -1,8 +1,9 @@
 export interface PostProps {
-    posts: {
+    post: {
         slug: string;
         title: string;
         content: string;
         updatedAt: string;
+        tags: string;
     }
 }

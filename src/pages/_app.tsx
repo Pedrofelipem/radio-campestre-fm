@@ -11,9 +11,6 @@ import { Header } from '../components/Header/header'
 
 import './../styles/global.scss'
 
-
-
-
 function MyApp({ Component, pageProps}) {
   return (
       <>
