@@ -1,7 +1,5 @@
 @import '../../../styles/_variables.scss';
 
-
-
 .containerMenu{
     display: flex;
 }
@@ -15,7 +13,7 @@
 }
 
 .dropdownMenu li{
-    width: 8.5rem;
+    width: 6.5rem;
     height: 5.1rem;
 }
 
@@ -23,7 +21,7 @@
     display: block;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background: $tranparent;
     width: 100%;
     height: 100%;
@@ -92,7 +90,7 @@
     section{
         background-color: $white;
         color: black;
-        width: 80rem;
+        width: 70rem;
         height: 25rem;
         position: absolute;
         right: 40px;

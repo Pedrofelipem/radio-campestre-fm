@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import { PostProps } from "../../modules/postProps";
 import { getPrismicClient } from "../../services/prismic";
 import PrismicDOM from 'prismic-dom';
-import { ItemDetalhePost } from "../../components/Home/Components/itemPost/intemDetalhePost";
+import { ItemDetalhePost } from "../../components/Home/Components/itemDetalhePost/intemDetalhePostProps";
 
 export default function Post({ post }: PostProps) {
     return(
