@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import { faSquareFacebook, faSquareTwitter, faSquareWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { faSquareFacebook, faSquareTwitter, faSquareWhatsapp,  } from '@fortawesome/free-brands-svg-icons'
+import { faSquareEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { ItemDetalhePostProps } from "../../../../modules/itemDetalhePostProps";
@@ -13,10 +14,16 @@ import { Tags } from "../tags/tags";
 
 export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
     const {post} = props;
+    const [valor, setValor] = useState('')
+    useEffect(()=>{
+        let url = window.location.href
+        setValor(url)
+    },[])
+    
     return(
         <div>
             <Head>
-               <title>{post.title}</title>
+               <title>{post.title[0].toUpperCase() + post.title.substr(1)}</title>
             </Head>
 
             <article className={styles.container}>
@@ -30,20 +37,29 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
 
                     <p className={styles.linha}></p>
 
-                    <div className={styles.iconesRedesSociais}>
-                        <a className={styles.facebook}>
-                            <FontAwesomeIcon icon={ faSquareFacebook} />
-                        </a>
-                        <a className={styles.twitter}>
-                            <FontAwesomeIcon icon={ faSquareTwitter } />
-                        </a>
-                        <a className={styles.whatsapp}>
-                            <FontAwesomeIcon icon={ faSquareWhatsapp } />
-                        </a>
-                        <a className={styles.telegram}>
-                            <FontAwesomeIcon icon={ faTelegram } />
-                        </a>
-                    </div>  
+                    <div className={styles.shareSociais}>
+                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${valor}`} >
+                            <a className={styles.facebook} >
+                                <FontAwesomeIcon icon={ faSquareFacebook} />
+                            </a>
+                        </Link>
+                        <Link href={'/'} >
+                            <a className={styles.twitter}>
+                                <FontAwesomeIcon icon={ faSquareTwitter } />
+                            </a>
+                        </Link>
+                        <Link href={'/'}>
+                            <a className={styles.whatsapp}>
+                                <FontAwesomeIcon icon={ faSquareWhatsapp } />
+                            </a>
+                        </Link>
+                        <Link href={'/'}>
+                            <a className={styles.email}>
+                                <FontAwesomeIcon icon={ faSquareEnvelope } />
+                            </a>
+                        </Link>
+                    </div> 
+                     
                 </div>
 
                 <div className={styles.containerContent}>

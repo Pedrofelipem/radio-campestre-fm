@@ -7,7 +7,6 @@ import styles from './styles.module.scss';
 import { AuthorTime } from "../authorTime/authorTime";
 import { Tags } from "../tags/tags";
 
-
 export const ItemPost = ( props : IntemPostProps ) => {
     const {post} = props;
     
