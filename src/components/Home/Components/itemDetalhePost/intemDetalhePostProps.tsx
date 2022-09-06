@@ -42,7 +42,7 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
                     <div className={styles.shareSociais}>
                         <Link href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} >
                             <a className={styles.facebook} >
-                                <FontAwesomeIcon icon={ faSquareFacebook} />
+                                <FontAwesomeIcon icon={ faSquareFacebook } />
                             </a>
                         </Link>
                         <Link href={`https://twitter.com/intent/tweet?text=${url}`} >
@@ -50,12 +50,12 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
                                 <FontAwesomeIcon icon={ faSquareTwitter } />
                             </a>
                         </Link>
-                        <Link href={`whatsapp://send?text=${url}`}>
+                        <Link href={`whatsapp://send?text=CampestreFM:${url}`}>
                             <a className={styles.whatsapp}>
                                 <FontAwesomeIcon icon={ faSquareWhatsapp } />
                             </a>
                         </Link>
-                        <Link href={`mailto:campestrefmblog@gmail.com?Subject=${post.title}&Body=${url}`}>
+                        <Link href={`mailto:?Subject=${post.title}&Body=${url}`}>
                             <a className={styles.email}>
                                 <FontAwesomeIcon icon={ faSquareEnvelope } />
                             </a>
