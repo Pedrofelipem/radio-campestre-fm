@@ -12,7 +12,7 @@ export default function Home({posts}: PostsProps) {
     <div>
         <div>
             {posts.map(Post => (
-                <ItemPost post={Post} key={Post.slug}/>
+                <ItemPost post={Post} key={Post.slug}/>  
             ))}   
         </div>
     </div>
@@ -22,16 +22,18 @@ export default function Home({posts}: PostsProps) {
 export const getStaticProps:GetStaticProps = async () => {
     const prismic = getPrismicClient();
     const response = await prismic.query([
-        Prismic.predicates.at('document.type', 'Post')
+        Prismic.predicates.at('document.type', 'Post'),
     ], {
-        fetch: ['Post.title', 'Post.content', 'Post.image'],
+        fetch: ['Post.title', 'Post.author', 'Post.tags', 'Post.content', 'Post.image'],
+        orderings:["document.last_publication_date desc"],
         pageSize: 100,
     })
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
-            tags: post.tags[0],
+            tags: post.tags,
             title: post.data.title.find(title => title.type === 'heading1')?.text ?? '',
+            author: post.data.author.find(author => author.type === 'paragraph')?.text ?? '',
             excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
             image: post.data.content.find(content => content.type === 'image')?.url ?? '',
             updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR',{
@@ -39,9 +41,11 @@ export const getStaticProps:GetStaticProps = async () => {
                 month: 'long',
                 year: 'numeric'
             })
+            
         }
+        
     })
-    
+
     return{
         props: {
             posts

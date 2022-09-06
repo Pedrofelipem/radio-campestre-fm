@@ -24,8 +24,9 @@ export const getServerSideProps: GetServerSideProps = async({ req, params }) => 
    
     const post = {
         slug,
-        tags: response.tags[0],
+        tags: response.tags,
         title: response.data.title.find(title => title.type === 'heading1')?.text ?? '',
+        author: response.data.author.find(author => author.type === 'paragraph')?.text ?? '',
         content: PrismicDOM.RichText.asHtml(response.data.content),
         updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR',{
             day: '2-digit',

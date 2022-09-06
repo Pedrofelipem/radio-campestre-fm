@@ -1,0 +1,31 @@
+@import '../../../../styles/_variables.scss';
+
+.containerTimeAutor{
+    display: flex;
+    padding-top: $padding-top-post;
+
+    .containerTime{
+        margin-left: 10px;
+        time{
+            color: $color-gray;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }   
+    .containerAuthor{
+        span{
+            color: $color-black;
+            font-size: 10px;
+            font-weight: 600;
+            ::first-letter{
+                text-transform: uppercase;
+            }
+            .textPor{
+                color: $color-gray;
+                font-size: 10px;
+                font-weight: 600;
+            }
+        }
+        
+    }
+} 

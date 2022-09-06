@@ -5,5 +5,6 @@ export interface Post {
     updatedAt: string;
     image?: string;
     tags?: string;
+    author?: string;
     content?: string;
 }

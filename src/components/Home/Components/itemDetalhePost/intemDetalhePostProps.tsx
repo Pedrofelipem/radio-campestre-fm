@@ -2,39 +2,47 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+import { faSquareFacebook, faSquareTwitter, faSquareWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { ItemDetalhePostProps } from "../../../../modules/itemDetalhePostProps";
 
 import styles from './styles.module.scss'
+import { AuthorTime } from "../authorTime/authorTime";
+import { Tags } from "../tags/tags";
 
 export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
     const {post} = props;
-    
     return(
         <div>
             <Head>
-                {post.title}
+               <title>{post.title}</title>
             </Head>
+
             <article className={styles.container}>
                 <div className={styles.containerPrimary}>
-                    <Link className={styles.teste} href={`/post/${post.slug}`}>
-                        <div className={styles.containerTags}>
-                            <a className={styles.buttonTags}>
-                                <div></div>
-                                <p>{post.tags}</p>
-                            </a>
-                        </div>
-                    </Link>
-                    
+
+                    <Tags post={post}/>
                     
                     <h1>{post.title}</h1>
 
-                    <div className={styles.containerTime}>
-                        <time>{post.updatedAt}</time> 
-                    </div>
+                    <AuthorTime post={post}/>
 
-                    <hr/>
+                    <p className={styles.linha}></p>
 
                     <div className={styles.iconesRedesSociais}>
+                        <a className={styles.facebook}>
+                            <FontAwesomeIcon icon={ faSquareFacebook} />
+                        </a>
+                        <a className={styles.twitter}>
+                            <FontAwesomeIcon icon={ faSquareTwitter } />
+                        </a>
+                        <a className={styles.whatsapp}>
+                            <FontAwesomeIcon icon={ faSquareWhatsapp } />
+                        </a>
+                        <a className={styles.telegram}>
+                            <FontAwesomeIcon icon={ faTelegram } />
+                        </a>
                     </div>  
                 </div>
 

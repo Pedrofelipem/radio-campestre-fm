@@ -4,41 +4,8 @@
     padding: 6rem 1rem 0 3rem;
 
     .containerPrimary{
-        max-width: 60%;
-
-        .containerTags{
-            padding-top: 1.5rem;
-        }
-        .buttonTags{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-            height: 1.4rem;
-            width: 7rem;
-            background: $background-tag;
-            border-radius: 3rem;
-            border: 1px solid $border-color-gray;
-            div{
-                background: $hover-blue;
-                border-radius: 50%;
-                height: 16px;
-                width: 16px;
-                
-            }
-            p{
-                font-size: 0.9rem;
-                text-align: center;
-                text-transform: uppercase;
-                color: $color-body-text;
-                font-weight: 100;
-                &:hover{
-                    color: $hover-blue;
-                }
-            }
-        }
-        
-        
+        max-width: 65%;
+    
             h1{
                 color: $color-blue;
                 font-weight: 800;
@@ -48,31 +15,110 @@
                     text-transform: uppercase;
                 }
             }
-    
-
-        .containerTime{
-            padding-top: 0.2rem;
-            padding-bottom: 1rem;
-            time{
-                color: $color-gray;
-                font-size: 13px;
-            }
-        }   
+        .linha{
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border-top: 0.01rem solid $color-border-grey;
+        }
 
         .iconesRedesSociais{
+            display: flex;
+            gap: 10px;
+            justify-content: right;
+            .facebook{
+                font-size: 30px;
+                color: $color-facebook;
+            }
+            .twitter{
+                font-size: 30px;
+                color: $color-twitter;
+            }
+            .whatsapp{
+                font-size: 30px;
+                color: $color-whatsapp;
+            }
 
+            .telegram{
+                font-size: 20px;
+                color: $color-telegram;
+                padding: 10px;  
+            }
         }
     }
     .containerContent{
-        max-width: 80%;
+        max-width: 65%;
         .content{
-            max-width: 80%;
+            
+            p{
+                color: $color-body-text;
+                margin-bottom: 25px;
+                line-height: 1.75rem;
+            }
+            strong{
+                color: $color-body-text;
+                margin-bottom: 25px;
+                line-height: 1.75rem;
+            }
+            a{  
+                color: $color-hiperlink;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            ul{
+                li{
+                    color: $color-body-text;
+                    list-style-type: inherit;
+                }
+            }
+            ol{    
+                li{
+                    color: $color-body-text;
+                    list-style-type: inherit;
+                }
+            }
+            h1{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
+            h2{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
+            h3{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
+            h4{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
+            h5{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
+            h6{
+                margin-bottom: 25px;
+                color: $color-body-text;
+                line-height: 1.75rem;
+            }
             img{
-                width: 45rem;
+                
+                width: 100%;
+                height: 28rem;
+                border-radius: 5px;
             }
             iframe{
-                width: 80%;
-                height: 500px;
+                width: 100%;
+                height: 28rem;
+                border-radius: 5px;
+                
             }
         }
 

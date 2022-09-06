@@ -6,37 +6,6 @@
     height: 30rem;
 
    .containerContent{
-        .containerTags{
-            padding-top: 1.5rem;
-        }
-        .buttonTags{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-            height: 1.7rem;
-            width: 8rem;
-            background: $background-tag;
-            border-radius: 3rem;
-            border: 1px solid $border-color-gray;
-            div{
-                background: $hover-blue;
-                border-radius: 50%;
-                height: 18px;
-                width: 18px;
-                
-            }
-            p{
-                font-size: 1rem;
-                text-align: center;
-                text-transform: uppercase;
-                color: $color-body-text;
-                font-weight: 100;
-                &:hover{
-                    color: $hover-blue;
-                }
-            }
-        }
     
         .containerTitle{
             h3{
@@ -60,13 +29,7 @@
                 
             }
         }
-        .containerTime{
-            padding-top: $padding-top-post;
-            time{
-                color: $color-gray;
-                font-size: 13px;
-            }
-        }    
+       
     }
 
     img{
@@ -74,8 +37,5 @@
         height: 17rem !important;
         border-radius: 8px !important;
     }
-    
-    .content{
-      
-    }
+
 }

@@ -21,6 +21,15 @@
           "single": "heading1"
         }
       },
+      "author": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Autor",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
       "content": {
         "type": "StructuredText",
         "config": {
@@ -30,14 +39,7 @@
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "conteudo_externo": {
-        "type": "Embed",
-        "config": {
-          "label": "Conteúdo externo",
-          "placeholder": ""
-        }
-      },
-      "imagem": {
+      "image": {
         "type": "Image",
         "config": {
           "label": "Imagem",
