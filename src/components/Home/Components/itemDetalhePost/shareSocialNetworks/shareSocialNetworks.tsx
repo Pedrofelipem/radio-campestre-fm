@@ -39,7 +39,7 @@ export const ShareSocialNetworks = (props : ItemDetalhePostProps) => {
                         <FontAwesomeIcon icon={ faSquareWhatsapp } />
                     </a>
                 </Link>
-                <Link href={`mailto:?Subject=${post.title}&Body=${url}${post.image}`}>
+                <Link href={`mailto:?Subject=${post.title}&Body=${textWhats}${url}`}>
                     <a className={styles.email}>
                         <FontAwesomeIcon icon={ faSquareEnvelope } />
                     </a>
