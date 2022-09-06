@@ -25,17 +25,17 @@ export const ShareSocialNetworks = (props : ItemDetalhePostProps) => {
         <>
             <div className={styles.shareSociais}>
                 <Link href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} >
-                    <a className={styles.facebook} >
+                    <a target='_blank' className={styles.facebook} >
                         <FontAwesomeIcon icon={ faSquareFacebook } />
                     </a>
                 </Link>
                 <Link href={`https://twitter.com/intent/tweet?text=${url}`} >
-                    <a className={styles.twitter}>
+                    <a target='_blank' className={styles.twitter}>
                         <FontAwesomeIcon icon={ faSquareTwitter } />
                     </a>
                 </Link>
                 <Link href={`whatsapp://send?text=${textWhats}${url}`}>
-                    <a className={styles.whatsapp}>
+                    <a target='_blank' className={styles.whatsapp}>
                         <FontAwesomeIcon icon={ faSquareWhatsapp } />
                     </a>
                 </Link>
