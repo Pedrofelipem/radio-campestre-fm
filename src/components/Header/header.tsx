@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Menu } from "./Menu/menu";
 import { Player } from "./Player/player";
@@ -26,7 +24,7 @@ export const Header = () => {
     return (
         <header className={trocarCor ? `${styles.activeColor}` : `${ styles.headerContainer}`} >
             <div className={styles.containerImg}>
-                
+               <Link href="/"><img src="/images/logo-campestre-fm.png" alt="campestre fm" width={120} height={120}/></Link> 
             </div>
             <Player/>
             <Menu/>

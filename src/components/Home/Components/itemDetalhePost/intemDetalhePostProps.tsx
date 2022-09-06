@@ -14,8 +14,10 @@ import { Tags } from "../tags/tags";
 
 export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
     const {post} = props;
+    
     const [valor, setValor] = useState('')
-    useEffect(()=>{
+
+    useEffect( ()=> {
         let url = window.location.href
         setValor(url)
     },[])
