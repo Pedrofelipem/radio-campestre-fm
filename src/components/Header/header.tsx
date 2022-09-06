@@ -26,7 +26,7 @@ export const Header = () => {
     return (
         <header className={trocarCor ? `${styles.activeColor}` : `${ styles.headerContainer}`} >
             <div className={styles.containerImg}>
-               <Link href="/"><Image src="/images/logo-campestre-fm.png" alt="campestre fm" width={120} height={120}/></Link> 
+                
             </div>
             <Player/>
             <Menu/>
