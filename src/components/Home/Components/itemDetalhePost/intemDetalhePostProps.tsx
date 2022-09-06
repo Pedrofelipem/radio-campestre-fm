@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import { faSquareFacebook, faSquareTwitter, faSquareWhatsapp,  } from '@fortawesome/free-brands-svg-icons'
+import { faSquareFacebook, faSquareTwitter, faSquareWhatsapp,   } from '@fortawesome/free-brands-svg-icons'
 import { faSquareEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -14,12 +14,12 @@ import { Tags } from "../tags/tags";
 
 export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
     const {post} = props;
-    
-    const [valor, setValor] = useState('')
 
-    useEffect( ()=> {
-        let url = window.location.href
-        setValor(url)
+    const [url, setUrl] = useState('')
+
+    useEffect( () => {
+        let url_atual = window.location.href
+        setUrl(url_atual)
     },[])
     
     return(
@@ -40,22 +40,22 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
                     <p className={styles.linha}></p>
 
                     <div className={styles.shareSociais}>
-                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${valor}`} >
+                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} >
                             <a className={styles.facebook} >
                                 <FontAwesomeIcon icon={ faSquareFacebook} />
                             </a>
                         </Link>
-                        <Link href={'/'} >
+                        <Link href={`https://twitter.com/intent/tweet?text=${url}`} >
                             <a className={styles.twitter}>
                                 <FontAwesomeIcon icon={ faSquareTwitter } />
                             </a>
                         </Link>
-                        <Link href={'/'}>
+                        <Link href={`whatsapp://send?text=${url}`}>
                             <a className={styles.whatsapp}>
                                 <FontAwesomeIcon icon={ faSquareWhatsapp } />
                             </a>
                         </Link>
-                        <Link href={'/'}>
+                        <Link href={`mailto:campestrefmblog@gmail.com?Subject=${post.title}&Body=${url}`}>
                             <a className={styles.email}>
                                 <FontAwesomeIcon icon={ faSquareEnvelope } />
                             </a>
