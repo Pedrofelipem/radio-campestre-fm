@@ -21,40 +21,6 @@
             border-top: 0.01rem solid $color-border-grey;
         }
 
-        .shareSociais{
-            display: flex;
-            gap: 10px;
-            justify-content: right;
-            .facebook{
-                font-size: 30px;
-                color: $color-facebook;
-                &:hover{
-                    color: $color-share-hover;
-                }
-            }
-            .twitter{
-                font-size: 30px;
-                color: $color-twitter;
-                &:hover{
-                    color: $color-share-hover;
-                }
-            }
-            .whatsapp{
-                font-size: 30px;
-                color: $color-whatsapp;
-                &:hover{
-                    color: $color-share-hover;
-                }
-            }
-            .email{
-                font-size: 30px;
-                color: $color-email;
-                &:hover{
-                    color: $color-share-hover;
-                }
-            }
-
-        }
     }
     .containerContent{
         max-width: 65%;

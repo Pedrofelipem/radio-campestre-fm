@@ -1,0 +1,36 @@
+@import '../../../../../styles/_variables.scss';
+
+.shareSociais{
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    .facebook{
+        font-size: 30px;
+        color: $color-facebook;
+        &:hover{
+            color: $color-share-hover;
+        }
+    }
+    .twitter{
+        font-size: 30px;
+        color: $color-twitter;
+        &:hover{
+            color: $color-share-hover;
+        }
+    }
+    .whatsapp{
+        font-size: 30px;
+        color: $color-whatsapp;
+        &:hover{
+            color: $color-share-hover;
+        }
+    }
+    .email{
+        font-size: 30px;
+        color: $color-email;
+        &:hover{
+            color: $color-share-hover;
+        }
+    }
+
+}
