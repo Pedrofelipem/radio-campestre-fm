@@ -9,6 +9,7 @@
         color: $color-facebook;
         &:hover{
             color: $color-share-hover;
+            transition: all 1s;
         }
     }
     .twitter{
@@ -16,6 +17,7 @@
         color: $color-twitter;
         &:hover{
             color: $color-share-hover;
+            transition: all 1s;
         }
     }
     .whatsapp{
@@ -23,13 +25,16 @@
         color: $color-whatsapp;
         &:hover{
             color: $color-share-hover;
+            transition: all 1s;
         }
     }
     .email{
         font-size: 30px;
         color: $color-email;
+        
         &:hover{
             color: $color-share-hover;
+            transition: all 1s;
         }
     }
 
