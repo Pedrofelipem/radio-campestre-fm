@@ -6,10 +6,12 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../services/prismic'
 
+import './../styles/global.scss'
+
 import { Footer } from '../components/Footer/footer'
 import { Header } from '../components/Header/header'
 
-import './../styles/global.scss'
+
 
 function MyApp({ Component, pageProps}) {
   return (

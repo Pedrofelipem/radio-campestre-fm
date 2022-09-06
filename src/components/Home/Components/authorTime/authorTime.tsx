@@ -1,9 +1,8 @@
 import React from "react";
-import { IntemPostProps } from "../../../../modules/itemPostPros";
-
 
 import styles from './styles.module.scss';
 
+import { IntemPostProps } from "../../../../modules/itemPostPros";
 export const AuthorTime = (props : IntemPostProps) => {
     
     const {post} = props;

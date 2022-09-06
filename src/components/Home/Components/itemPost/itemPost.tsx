@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-import { IntemPostProps } from "../../../../modules/itemPostPros";
-
 import styles from './styles.module.scss';
+
 import { AuthorTime } from "../authorTime/authorTime";
 import { Tags } from "../tags/tags";
+import { IntemPostProps } from "../../../../modules/itemPostPros";
 
 export const ItemPost = ( props : IntemPostProps ) => {
     const {post} = props;

@@ -3,8 +3,6 @@ import ReactAudioPlayer from 'react-audio-player';
 
 import styles from './styles.module.scss' 
 
-
-
 export const Player = () => {
     return(
         <div className={styles.containerPlayer}>

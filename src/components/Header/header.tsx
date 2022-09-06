@@ -1,8 +1,10 @@
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+
+import styles  from "./styles.module.scss";
+
 import { Menu } from "./Menu/menu";
 import { Player } from "./Player/player";
-import styles  from "./styles.module.scss";
 
 export const Header = () => {
     const [trocarCor, setTrocarCor] = useState<boolean>(false);
@@ -20,8 +22,8 @@ export const Header = () => {
 
     }, []);
     
-
     return (
+        
         <header className={trocarCor ? `${styles.activeColor}` : `${ styles.headerContainer}`} >
             <div className={styles.containerImg}>
                <Link href="/"><img src="/images/logo-campestre-fm.png" alt="campestre fm" width={120} height={120}/></Link> 

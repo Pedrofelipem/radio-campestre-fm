@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { IntemPostProps } from "../../../../modules/itemPostPros";
 
 import styles from './styles.module.scss'
 
+import { IntemPostProps } from "../../../../modules/itemPostPros";
+
 export const Tags = ( props : IntemPostProps) => {
     const {post} = props;
+
     return(
         <>
             {post.tags.length === 0 ? "" :
@@ -17,7 +19,7 @@ export const Tags = ( props : IntemPostProps) => {
                         </a>
                     </div>
                 </Link>
-                }
+            }
         </>
     )
 }
