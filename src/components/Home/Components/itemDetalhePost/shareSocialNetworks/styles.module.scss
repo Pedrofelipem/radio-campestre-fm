@@ -4,8 +4,9 @@
     display: flex;
     gap: 10px;
     justify-content: right;
+    margin-bottom: 15px;
     .facebook{
-        font-size: 30px;
+        font-size: $fontsize-icon-share;
         color: $color-facebook;
         &:hover{
             color: $color-share-hover;
@@ -13,7 +14,7 @@
         }
     }
     .twitter{
-        font-size: 30px;
+        font-size: $fontsize-icon-share;
         color: $color-twitter;
         &:hover{
             color: $color-share-hover;
@@ -21,7 +22,7 @@
         }
     }
     .whatsapp{
-        font-size: 30px;
+        font-size: $fontsize-icon-share;
         color: $color-whatsapp;
         &:hover{
             color: $color-share-hover;
@@ -29,7 +30,7 @@
         }
     }
     .email{
-        font-size: 30px;
+        font-size: $fontsize-icon-share;
         color: $color-email;
         
         &:hover{

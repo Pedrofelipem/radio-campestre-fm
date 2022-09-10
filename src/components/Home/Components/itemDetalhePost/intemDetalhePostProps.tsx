@@ -15,6 +15,7 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
         <div>
             <Head>
                <title>{post.title[0].toUpperCase() + post.title.substr(1)}</title>
+               <meta property="og:image" content={post.image}/>
             </Head>
 
             <article className={styles.container}>

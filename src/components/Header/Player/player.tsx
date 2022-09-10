@@ -8,11 +8,10 @@ export const Player = () => {
         <div className={styles.containerPlayer}>
             <ReactAudioPlayer
                 className={styles.player}
-                src="https://stm21.srvaudio.com.br:10450/stream"
+                src="http://stm21.srvaudio.com.br:10450/stream?1662845893340"
                 autoPlay={true}
                 controls
             />
-
         </div>
     )
 }
