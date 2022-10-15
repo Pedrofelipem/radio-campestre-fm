@@ -19,11 +19,11 @@ export default function Post({ post, banners}) {
                 
                 <div className={`${styles.wrap_banners}`}>
                     {banners && banners.map(bannerPrincipal => (
-                        <img className={styles.bannerPrincipal} src={bannerPrincipal.principal.url}/>
+                        <img key={bannerPrincipal.principal.url} className={styles.bannerPrincipal} src={bannerPrincipal.principal.url}/>
                     ))}
 
                     {banners && banners.map(bannerSecundario => (
-                        <img className={styles.bannerSecundario} src={bannerSecundario.secundario.url}/>
+                        <img key={bannerSecundario.secundario.url} className={styles.bannerSecundario} src={bannerSecundario.secundario.url}/>
                     ))}
                 </div>
             </div>
