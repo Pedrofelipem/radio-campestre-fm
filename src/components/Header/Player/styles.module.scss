@@ -1,11 +1,12 @@
 @import '../../../styles/_variables.scss';
 .containerPlayer{
-    
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: 10rem;
+    left: 10rem; */
+    align-items: center;
+    display: flex;
     .player{
         height: 2rem;
         width: 20rem;

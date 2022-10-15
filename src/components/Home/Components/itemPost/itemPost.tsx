@@ -13,8 +13,7 @@ export const ItemPost = ( props : IntemPostProps ) => {
     let resumo = post.excerpt.substr(0, 140);
    
     return (
-
-        <article className={styles.containerPost} key={post.slug}>
+        <article className={`${styles.containerPost} ${styles.centralizer}`} key={post.slug}>
             <Link  href={`/post/${post.slug}`}>
                 <a>
                     <img src={post.image} alt='image' />
@@ -39,6 +38,5 @@ export const ItemPost = ( props : IntemPostProps ) => {
                 </div>   
             </div>
         </article>
-        
     );
 }

@@ -30,3 +30,13 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+#__next{
+  display: flex;
+  justify-content: center;
+  @media(max-width: 640px){
+    display: initial !important;
+    justify-content: initial !important;
+    
+  }
+}

@@ -18,7 +18,7 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
                <meta property="og:image" content={post.image}/>
             </Head>
 
-            <article className={styles.container}>
+            <article className={`${styles.container} ${styles.centralizer}`}>
                 <div className={styles.containerPrimary}>
                     <Tags post={post}/>
                     <h1>{post.title}</h1>
@@ -32,7 +32,8 @@ export const ItemDetalhePost = ( props : ItemDetalhePostProps) => {
                         dangerouslySetInnerHTML={{ __html: post.content}} />
                 </div>
             </article>
-
+           
         </div>
     )
 }
+

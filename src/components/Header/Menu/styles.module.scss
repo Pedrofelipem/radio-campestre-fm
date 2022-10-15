@@ -2,13 +2,14 @@
 
 .containerMenu{
     display: flex;
+    align-items: center;
 }
 .dropdownMenu{
     display: flex;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     right: 2rem;
 }
 
@@ -103,12 +104,11 @@
 
 
 //########################## ********************RESPONSIVE DESKTOP*********************** ##########################################
-@media(max-width:$screen-desktop){
+@media(max-width: $screen-desktop){
     .containerMenu{
        .dropdownMenu{
         display: none;
        }
-       
     }
 
 }
@@ -116,13 +116,13 @@
 
 
 //########################## ********************RESPONSIVE TABLET*********************** ##########################################
-@media(max-width:$screen-tablet){
+@media(max-width: $screen-tablet){
     
 }
 
 
 //########################## ********************RESPONSIVE MOBILE*********************** ##########################################
-@media(max-width:$screen-mobile){
+@media(max-width: $screen-mobile){
 
 }
 

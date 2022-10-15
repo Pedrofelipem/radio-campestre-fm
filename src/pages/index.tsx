@@ -7,6 +7,7 @@ import * as Prismic from '@prismicio/client';
 
 import { ItemPost } from "./../components/Home/Components/itemPost/itemPost";
 
+
 export default function Home({posts}: PostsProps) {
   return (
     <div>
@@ -26,8 +27,9 @@ export const getStaticProps:GetStaticProps = async () => {
     ], {
         fetch: ['Post.title', 'Post.author', 'Post.tags', 'Post.content', 'Post.image'],
         orderings:["document.last_publication_date desc"],
-        pageSize: 100,
+        pageSize: 4,
     })
+   
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
@@ -48,7 +50,7 @@ export const getStaticProps:GetStaticProps = async () => {
 
     return{
         props: {
-            posts
+            posts,
         }
     }
 }

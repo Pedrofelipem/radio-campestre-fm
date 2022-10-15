@@ -32,8 +32,7 @@ export const Menu = () =>{
                     </ul>
                 </li>
                 <li>
-                    <Link href="#">Contato</Link>
-                    
+                    <Link href="#">Contato</Link> 
                 </li>
                 <li>
                     <Link href="#">Sobre &#9660;</Link>

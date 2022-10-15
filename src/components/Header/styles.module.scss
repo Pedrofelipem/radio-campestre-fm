@@ -17,14 +17,32 @@
     position: fixed;
     transition: 2s;
     display: flex;
+
 }
 .containerImg{
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    //padding-left: 2rem;
     cursor: pointer;
 }
 
+
+.centralizer{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1700px;
+    width: 100%;
+    @media(max-width: 1024px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media(min-width: 1025px) and (max-width: 1405px){
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 
 //########################## ********************RESPONSIVE DESKTOP*********************** ##########################################
 @media(max-width:$screen-desktop){

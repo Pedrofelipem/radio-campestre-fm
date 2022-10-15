@@ -1,0 +1,26 @@
+{
+  "id": "banners_post",
+  "label": "Banners post",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banner_principal": {
+        "type": "Image",
+        "config": {
+          "label": "Banner Principal",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "banner_secundario": {
+        "type": "Image",
+        "config": {
+          "label": "Banner Secundário",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

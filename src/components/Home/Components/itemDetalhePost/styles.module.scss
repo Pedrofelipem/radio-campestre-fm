@@ -1,31 +1,28 @@
 @import '../../../../styles/_variables.scss';
 
 .container{
-    padding: 6rem 1rem 0 3rem;
+    padding-top: 6rem;
     
     .containerPrimary{
-        max-width: 65%;
-    
-            h1{
-                color: $color-blue;
-                font-weight: 800;
-                font-size: $fontsize-post-title-large;
-                padding-top: 0.8rem;
-                &:first-letter {
-                    text-transform: uppercase;
-                }
+        max-width: 97%;
+        h1{
+            color: $color-blue;
+            font-weight: 800;
+            font-size: $fontsize-post-title-large;
+            padding-top: 0.8rem;
+            &:first-letter {
+                text-transform: uppercase;
             }
+        }
         .linha{
             margin-top: 8px;
             margin-bottom: 8px;
             border-top: 0.01rem solid $color-border-grey;
         }
-
     }
     .containerContent{
-        max-width: 65%;
+       // max-width: 97%;
         .content{
-            
             p{
                 color: $color-body-text;
                 margin-bottom: $margin-bottom-content;
@@ -97,18 +94,37 @@
                 line-height: 1.75rem;
             }
             img{
-                
                 width: 100%;
                 height: $height-img-iframe;
                 border-radius: 5px;
+                //max-width: $image-max-width;
+                @media(max-width: 640px){
+                    height: $height-img-iframe-mobile !important;
+                }
             }
             iframe{
                 width: 100%;
                 height: $height-img-iframe;
-                border-radius: 5px;
-                
+                border-radius: 5px;  
+                @media(max-width: 640px){
+                    height: $height-img-iframe-mobile !important;
+                }
             }
         }
 
     }
 }
+
+.centralizer{
+    margin: 0 auto;
+    max-width: $maxWidth;
+    width: 100%;
+    @media(max-width: 1024px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media(min-width: 1025px) and (max-width: 1405px){
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
